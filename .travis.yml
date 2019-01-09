@@ -12,7 +12,9 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
 
+
 before_script:
+  - export REACT_APP_USERS_SERVICES_URL=http://127.0.0.1
   - docker-compose -f docker-compose-dev.yml up --build -d
 
 script:
